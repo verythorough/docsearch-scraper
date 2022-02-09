@@ -1,10 +1,10 @@
 import sys
 from os import getcwd, path, environ
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from builtins import input
 
-env_file = getcwd() + "/.env"
-load_dotenv(env_file)
+# env_file = getcwd() + "/.env"
+# load_dotenv(env_file)
 
 from .helpers import get_color
 from .helpers import printer
@@ -24,23 +24,23 @@ from .commands.modify_emails import UpdateEmails, DeleteEmails
 from .commands.invite_user import InviteUser
 from .commands.invite_removeuser import InviteRemoveUser
 
-if not path.isfile(env_file):
-    print("")
-    print("No .env found. Let's create one.")
+# if not path.isfile(env_file):
+#     print("")
+#     print("No .env found. Let's create one.")
 
-    f = open(env_file, "w")
+#     f = open(env_file, "w")
 
-    ans = input("What is your Algolia APPLICATION_ID: ")
-    f.write("APPLICATION_ID=" + ans + "\n")
+#     ans = input("What is your Algolia APPLICATION_ID: ")
+#     f.write("APPLICATION_ID=" + ans + "\n")
 
-    ans = input("What is your Algolia API_KEY: ")
-    f.write("API_KEY=" + ans + "\n")
+#     ans = input("What is your Algolia API_KEY: ")
+#     f.write("API_KEY=" + ans + "\n")
 
-    f.close()
+#     f.close()
 
-    print("")
+#     print("")
 
-load_dotenv(env_file)
+# load_dotenv(env_file)
 
 ADMIN = True
 CREDENTIALS = True

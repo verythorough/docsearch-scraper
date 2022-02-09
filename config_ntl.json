@@ -1,0 +1,89 @@
+{
+    "index_name": "docs-manual",
+    "start_urls": [
+      {
+        "url": "https://docs.netlify.com/",
+        "selectors_key": "docs",
+        "page_rank": 3
+      },
+      {
+        "url": "https://www.netlify.com/blog/",
+        "selectors_key": "blog",
+        "page_rank": 2
+      },
+      {
+        "url": "https://www.netlify.com/",
+        "selectors_key": "pages",
+        "page_rank": 1
+      }
+    ],
+    "stop_urls": [
+      "https://www.netlify.com/authors/",
+      "https://www.netlify.com/blog/page/",
+      "https://www.netlify.com/careers/",
+      "https://www.netlify.com/coming-soon/",
+      "https://www.netlify.com/comparisons/",
+      "https://www.netlify.com/docs/",
+      "https://www.netlify.com/events/",
+      "https://www.netlify.com/oreilly-thank-you/",
+      "https://www.netlify.com/pages/",
+      "https://www.netlify.com/site-of-the-week/",
+      "https://www.netlify.com/tags/",
+      "https://www.netlify.com/thanks-for-reaching-out/",
+      "https://www.netlify.com/thanks-for-signing-up/",
+      "https://www.netlify.com/topics/",
+      "https://docs.netlify.com/samples/",
+      "https://docs.netlify.com/404.html",
+      "\\?utm",
+      ".*(?<!/)$"
+    ],
+    "selectors_exclude": [
+      "body.page--home",
+      "body.page--blog-index",
+      "article.related-post"
+    ],
+    "sitemap_urls": [
+      "https://docs.netlify.com/sitemap.xml"
+    ],
+    "selectors": {
+      "docs": {
+        "lvl0": {
+          "selector": "",
+          "global": true,
+          "default_value": "In the docs"
+        },
+        "lvl1": ".content__default h1",
+        "lvl2": ".content__default h2",
+        "lvl3": ".content__default h3",
+        "lvl4": ".content__default h4",
+        "lvl5": ".content__default h5",
+        "text": ".content__default p, .content__default li, .content__default pre",
+        "lang": {
+          "selector": "/html/@lang",
+          "type": "xpath",
+          "global": true
+        }
+      },
+      "blog": {
+        "lvl0": {
+          "selector": "",
+          "default_value": "On our blog"
+        },
+        "lvl1": ".blog-post-header h1",
+        "lvl2": ".blog-post-info date",
+        "text": ".blog-post-info .avatar-name, .blog-post-markdown p, .blog-post-markdown li, .blog-post-markdown pre"
+      },
+      "pages": {
+        "lvl0": {
+          "selector": "",
+          "default_value": "On our site"
+        },
+        "lvl1": "main h1",
+        "lvl2": "main h2",
+        "lvl3": "main h3",
+        "text": "main p"
+      }
+    },
+    "strip_chars": " .,;:#"
+  }
+  
